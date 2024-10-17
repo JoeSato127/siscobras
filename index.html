@@ -37,6 +37,18 @@
             color: var(--main-blue); /* Set the title color to blue */
         }
 
+        .cobra-image {
+            width: 100px; /* Adjust the size as needed */
+            display: block;
+            margin: 1rem auto; /* Center the image */
+            animation: wiggle 1s infinite; /* Optional: Add a wiggle effect */
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+        }
+
         nav {
             margin: 1rem 0;
             text-align: center;
@@ -70,16 +82,28 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px var(--shadow);
             transition: transform 0.2s;
+            border: 2px solid var(--main-blue); /* Add border */
         }
 
         section:hover {
             transform: translateY(-5px);
+            background-color: var(--accent-color); /* Change background on hover */
         }
 
         h2 {
             color: var(--main-blue);
             font-family: 'Oswald', sans-serif;
             margin-bottom: 1rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px; /* Decorative line width */
+            height: 4px; /* Decorative line height */
+            background: var(--main-blue);
+            margin: 0.5rem auto; /* Center the line */
         }
 
         footer {
@@ -101,14 +125,14 @@
 
 <header>
     <h1>SIS Cobras Soccer Team</h1>
+    <img src="cobra.png" alt="Cobra" class="cobra-image">
 </header>
 
 <nav>
     <a href="index.html" aria-label="Home">Home</a>
     <a href="players.html" aria-label="Players">Players</a>
-    <a href="history.html" aria-label="History">History</a> <!-- Add this line -->
+    <a href="history.html" aria-label="History">History</a>
 </nav>
-
 
 <center>
 <div class="image-container">
@@ -116,7 +140,7 @@
 </div>
 </center>
 <main>
-  <section>
+    <section>
         <h2>Welcome to the SIS Cobras Soccer Team!</h2>
         <p>Our team is dedicated to fostering a love for soccer while promoting teamwork, discipline, and sportsmanship. We believe in developing skills and building character both on and off the field. Below you can find information about our coaches and upcoming matches.</p>
     </section>
@@ -130,7 +154,7 @@
         </ul>
     </section>
 
-<section>
+    <section>
         <h2>Players Stats</h2>
         <h3>Most Goals</h3>
         <li>Ju Hyuk Oh - 3 Goals</li>
