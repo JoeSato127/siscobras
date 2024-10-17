@@ -119,7 +119,46 @@
                 margin: 0.5rem 0;
             }
         }
+
+        /* Image gallery styles */
+        .image-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .image-slider {
+            width: 800px;
+            height: 600px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .image-slider img {
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: absolute;
+        }
+
+        .image-slider img.active {
+            display: block;
+        }
     </style>
+
+    <script>
+        // JavaScript for Image Slider
+        let currentIndex = 0;
+
+        function showNextImage() {
+            const images = document.querySelectorAll('.image-slider img');
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
 </head>
 <body>
 
@@ -132,13 +171,19 @@
     <a href="index.html" aria-label="Home">Home</a>
     <a href="players.html" aria-label="Players">Players</a>
     <a href="history.html" aria-label="History">History</a>
+    <a href="news.html" aria-label="News">News</a>
 </nav>
 
-<center>
+<!-- Image Slider Section -->
 <div class="image-container">
-    <img src="Untitled.png" width="800" height="600" alt="Description of image">
+    <div class="image-slider">
+        <img src="Untitled.png" alt="Match Photo 1" class="active">
+        <img src="image2.jpg" alt="Match Photo 2">
+        <img src="image3.jpg" alt="Match Photo 3">
+        <img src="image4.jpg" alt="Match Photo 4">
+    </div>
 </div>
-</center>
+
 <main>
     <section>
         <h2>Welcome to the SIS Cobras Soccer Team!</h2>
@@ -189,7 +234,7 @@
             <li style="color: red">Match 4: SIS COBRAS VS AL Azhar</li>
             <p>7-0 Win</p>
             <p>Goals: Shun Sato #17, Ju Hyuk Oh #9 (x3), Sun Woo Kim #7 (x2), Lionel Chandrawidjaja</p>
-            <p>Assists: Sun Woo Kim #7 (x2), Shun Sato #17 (x4) </p>
+            <p>Assists: Sun Woo Kim #7 (x2), Shun Sato #17 (x4)</p>
             <li style="color: red">Match 5: SIS COBRAS VS Ciputra</li>
             <p>2-0 Win</p>
             <p>Goals: Sang Woo Jeon #5, Sun Woo Kim #7</p>
@@ -205,11 +250,11 @@
             <p>0-0, Won In Penalties</p>
             <li style="color: red">Match 4: SIS COBRAS VS N/A</li>
             <p>0-2 Loss</p>
-<h2>IISSAC Tournament - Bandung</h2>
+        <h2>IISSAC Tournament - Bandung</h2>
         </ul>
     </section>
     
-<section>
+    <section>
         <h2>Recorded Matches</h2>
         <p>Google Drive - https://drive.google.com/drive/folders/1-0bLomLPbO8sObpmBQ2E_jS3M2hcPGMr?usp=drive_link</p>
     </section>
@@ -217,9 +262,10 @@
 
 <footer>
     <p>&copy; 2024 SIS Cobras Soccer Team</p>
-<p>Surabaya Intercultural School</p>
+    <p>Surabaya Intercultural School</p>
 </footer>
 
 </body>
 </html>
 
+    
