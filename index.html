@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIS Cobras Soccer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-blue: #0033cc;
+            --accent-color: #ffcc00; /* Gold accent color */
+            --background-color: #f4f4f4;
+            --white: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --text-gray: #666;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+        }
+
+        header {
+            background: url('header-bg.jpg') no-repeat center center/cover;
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            margin: 0;
+            color: var(--main-blue); /* Set the title color to blue */
+        }
+
+        nav {
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            color: var(--main-blue);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            border-color: var(--main-blue);
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        main {
+            margin: 1rem;
+        }
+
+        section {
+            margin: 1rem 0;
+            padding: 1.5rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--main-blue);
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--text-gray);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SIS Cobras Soccer Team</h1>
+</header>
+
+<nav>
+    <a href="index.html" aria-label="Home">Home</a>
+    <a href="players.html" aria-label="Players">Players</a>
+    <a href="history.html" aria-label="History">History</a> <!-- Add this line -->
+</nav>
+
+
+<center>
+<div class="image-container">
+    <img src="Untitled.png" width="800" height="600" alt="Description of image">
+</div>
+</center>
+<main>
+  <section>
+        <h2>Welcome to the SIS Cobras Soccer Team!</h2>
+        <p>Our team is dedicated to fostering a love for soccer while promoting teamwork, discipline, and sportsmanship. We believe in developing skills and building character both on and off the field. Below you can find information about our coaches and upcoming matches.</p>
+    </section>
+
+    <section>
+        <h2>Coaches</h2>
+        <ul>
+            <li>Coach - Charles Okeefe</li>
+            <li>Assistant Coach - Paul Crowe</li>
+            <li>Cameraman - Roben Haryo Wibisono</li>
+        </ul>
+    </section>
+
+<section>
+        <h2>Players Stats</h2>
+        <h3>Most Goals</h3>
+        <li>Ju Hyuk Oh - 3 Goals</li>
+        <li>Sun Woo Kim - 3 Goals</li>
+        <li>Peyton Bishop - 2 Goals</li>
+        <li>Shun Sato - 2 goals</li>
+        <li>Lionel Chandrawidjaja - 1 goal</li>
+        <li>Sang Woo Jeon - 1 goal</li>
+        <li>Joe Sato - 1 goal</li>
+
+        <h3>Most Assists</h3>
+        <li>Sun Woo Kim - 5 assists</li>
+        <li>Shun Sato - 4 assists</li>
+        <li>Samuel Putra Sentosa - 1 assist</li>
+        <li>Jeong Gwak (Robert) - 1 assist</li>
+        <li>Won Jun Choi - 1 assist</li>
+    </section>
+
+    <section id="matches">
+        <h2>Friendly Matches</h2>
+        <ul>
+            <li style="color: red">Match 1: SIS COBRAS VS SMA SEJAHTERA</li>
+            <p>1-2 Loss</p>
+            <p>Goal: Peyton Bishop #10</p>
+            <p>Assist: Sun Woo Kim</p>
+            <li style='color: red'>Match 2: SIS COBRAS VS SMAN 20 SURABAYA</li>
+            <p>1-1 Draw</p>
+            <p>Goal: Peyton Bishop #10</p>
+            <p>Assist: Sun Woo Kim #7</p>
+            <li style="color: red">Match 3: SIS COBRAS VS WESLEY</li>
+            <p>0-1 Loss</p>
+            <li style="color: red">Match 4: SIS COBRAS VS AL Azhar</li>
+            <p>7-0 Win</p>
+            <p>Goals: Shun Sato #17, Ju Hyuk Oh #9 (x3), Sun Woo Kim #7 (x2), Lionel Chandrawidjaja</p>
+            <p>Assists: Sun Woo Kim #7 (x2), Shun Sato #17 (x4) </p>
+            <li style="color: red">Match 5: SIS COBRAS VS Ciputra</li>
+            <p>2-0 Win</p>
+            <p>Goals: Sang Woo Jeon #5, Sun Woo Kim #7</p>
+            <p>Assists: Samuel Putra Sentosa #4, Jeong Gwak (Robert) #32</p>
+        <h2>Wesley Tournament</h2>
+            <li style="color: red">Match 1: SIS COBRAS VS N/A</li>
+            <p>0-2 Loss</p>
+            <li style="color: red">Match 2: SIS COBRAS VS SETIA BUDI</li>
+            <p>2-2 Draw</p>
+            <p>Goals: Joe Sato #14, Shun Sato #17</p>
+            <p>Assists: Sun Woo Kim #7, Won Jun Choi</p>
+            <li style="color: red">Match 3: SIS COBRAS VS Wesley</li>
+            <p>0-0, Won In Penalties</p>
+            <li style="color: red">Match 4: SIS COBRAS VS N/A</li>
+            <p>0-2 Loss</p>
+<h2>IISSAC Tournament - Bandung</h2>
+        </ul>
+    </section>
+    
+<section>
+        <h2>Recorded Matches</h2>
+        <p>Google Drive - https://drive.google.com/drive/folders/1-0bLomLPbO8sObpmBQ2E_jS3M2hcPGMr?usp=drive_link</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 SIS Cobras Soccer Team</p>
+<p>Surabaya Intercultural School</p>
+</footer>
+
+</body>
+</html>
